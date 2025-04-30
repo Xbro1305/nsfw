@@ -22,7 +22,7 @@ body {
   height: 50px;
   display: flex;
   align-items: center;
-  gap: 10px;  
+  gap: 10px;
 }
 
 .header h1 {
@@ -139,10 +139,12 @@ input:checked + .slider:before {
 .header-free-btn {
   background-color: transparent;
   border: 2px solid #ff4d4d;
-  color: #ff4d4d;
-  border-radius: 15px;
+  background: #ff4d4d;
+  color: white;
+  font-weight: 500;
+  border-radius: 20px;
   padding: 5px 15px;
-  font-size: 14px;
+  font-size: 18px;
 }
 .break {
   flex-basis: 100%;

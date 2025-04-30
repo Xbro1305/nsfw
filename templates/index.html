@@ -18,7 +18,7 @@
         "
       >
         <h1 style="margin: 0; font-size: 24px">NSFW-RolePlay</h1>
-        <button class="btn header-free-btn">Бесплатно</button>
+        <button class="btn header-free-btn">Войти</button>
       </div>
     </div>
 
@@ -105,7 +105,7 @@
           <div
             class="character-item"
             data-name="Ксюша"
-            data-desc="Твоя крашиха одноклассница, которую связали в школьном классе"
+            data-desc="Твоя крашиха одноклассница, которую связали в школьном классе Твоя крашиха одноклассница, которую связали в школьном классе Твоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классе Твоя крашиха одноклассница, которую связали в школьном классе Твоя крашиха одноклассница, которую связали в школьном классе Твоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классеТвоя крашиха одноклассница, которую связали в школьном классе"
             data-likes="198"
             data-comments="2040"
             data-creator="@Админ"
@@ -322,21 +322,24 @@
 
     <div class="character-modal" id="characterModal">
       <button class="close-btn" onclick="closeCharacterDetails()">×</button>
-      <h2 id="charName"></h2>
       <img id="charImage" src="" class="character-image" />
-      <div class="tags-container" id="charTags"></div>
-      <p id="charDescription"></p>
-      <div class="stats">
-        <span id="charLikes"></span>
-        <span id="charComments"></span>
-      </div>
-      <button class="start-chat-btn mt-3">Начать чат</button>
-      <div
-        class="creator mt-3"
-        onclick="showAdminModal()"
-        style="cursor: pointer"
-      >
-        Создатель: <span style="color: #ff4d4d" id="charCreator"></span>
+      <div class="character-modal-content">
+        <h2 id="charName"></h2>
+        <div class="tags-container" id="charTags"></div>
+        <p id="charDescription"></p>
+        <div class="stats">
+          <span id="charLikes"></span>
+          <span id="charComments"></span>
+          <div
+            class="creator mt-3"
+            onclick="showAdminModal()"
+            style="cursor: pointer"
+          >
+            Создатель: <span style="color: #ff4d4d" id="charCreator"></span>
+          </div>
+        </div>
+
+        <button class="start-chat-btn mt-3">Начать чат</button>
       </div>
     </div>
 

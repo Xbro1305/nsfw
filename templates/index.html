@@ -17,7 +17,15 @@
           justify-content: space-between;
         "
       >
-        <h1 style="margin: 0; font-size: 24px">NSFW-RolePlay</h1>
+        <h1 style="margin: 0; font-size: 24px">
+          <img src="../images/logo.png" alt="" />
+        </h1>
+        <button class="header-button">
+          <img src="../images/icon_tel1.png" alt="" />
+        </button>
+        <button class="header-button">
+          <img src="../images/translate_icon.png" alt="" />
+        </button>
         <button class="btn header-free-btn">Войти</button>
       </div>
     </div>
@@ -44,7 +52,7 @@
 
           <div class="filter-buttons">
             <button class="btn-filter active">Все</button>
-            <button class="btn-filter">В Тренде</button>
+            <button class="btn-filter">В тренде</button>
             <button class="btn-filter">Женский</button>
             <button class="btn-filter">Мужской</button>
             <button class="btn-filter">NSFW</button>
@@ -199,7 +207,7 @@
             data-likes="198"
             data-comments="2040"
             data-creator="@Админ"
-            data-tags='["Женский","Покорный","Сюжет"]'
+            data-tags='["Женский","Покорный","Сюжет", "Втренде", "В тренде"]'
             data-img="../images/characters/per5.jpg"
           >
             <div class="character-card" onclick="showCharacterDetails(this)">
@@ -696,9 +704,6 @@
               );
             }
           } else {
-            if (tags.includes("NSFW")) {
-              matchesTags = false;
-            }
           }
 
           // Логика по 18+:
@@ -781,29 +786,6 @@
         allBtnEl.classList.add("active");
         filterCharacters();
       });
-
-      // --- Обработчик для кнопки "NSFW" ---
-      const nsfwBtn = document.querySelector(
-        ".filter-buttons button:nth-child(5)"
-      );
-
-      if (nsfwBtn) {
-        nsfwBtn.addEventListener("click", () => {
-          const checkbox = document.getElementById("filter18");
-          const isActive = nsfwBtn.classList.contains("active");
-
-          if (!isActive) {
-            // Включаем "NSFW"
-            checkbox.checked = true;
-            nsfwBtn.classList.add("active");
-          } else {
-            // Выключаем "NSFW": снимаем чекбокс, убираем активность
-            checkbox.checked = false;
-            nsfwBtn.classList.remove("active");
-          }
-          filterCharacters();
-        });
-      }
 
       // --- Остальные функции для карточек ---
       function showCharacterDetails(element) {

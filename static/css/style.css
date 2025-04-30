@@ -34,6 +34,23 @@ body {
   justify-content: flex-end;
 }
 
+.header-button {
+  height: 22px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: none;
+}
+
+.header-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.row > :nth-child(2) {
+  height: 30px !important;
+}
+
 .search-row {
   display: flex;
   align-items: center;

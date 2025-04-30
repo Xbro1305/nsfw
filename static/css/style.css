@@ -86,7 +86,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 100%;
+  min-width: 220px;
 }
 .switch-container {
   display: flex;
@@ -344,4 +344,13 @@ input:checked + .slider:before {
 ::-webkit-scrollbar-thumb {
   background-color: gray; /* серый ползунок */
   border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .search-row {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 }

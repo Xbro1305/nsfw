@@ -44,7 +44,7 @@ body {
   margin: 15px auto;
 }
 .search-bar {
-  width: calc(100% - 70px);
+  width: 100%;
 }
 #searchInput {
   width: 100%;

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ролемантический</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div
+        class="row"
+        style="
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <h1 style="margin: 0; font-size: 24px">NSFW-RolePlay</h1>
+        <button class="btn header-free-btn">Бесплатно</button>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <div class="search-and-switches">
+        <div style="flex-grow: 1">
+          <div class="search-row">
+            <div class="search-bar">
+              <input
+                type="text"
+                placeholder="Поиск персонажей..."
+                id="searchInput"
+              />
+            </div>
+            <div class="switch-container">
+              <span class="switch-label">Создатель</span>
+              <label class="switch">
+                <input type="checkbox" id="creatorFilter" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-buttons">
+            <button class="btn-filter active">Все</button>
+            <button class="btn-filter">В Тренде</button>
+            <button class="btn-filter">Женский</button>
+            <button class="btn-filter">Мужской</button>
+            <button class="btn-filter">NSFW</button>
+            <button class="btn-filter">Вымышленный</button>
+            <button class="btn-filter">Покорный</button>
+            <button class="btn-filter">Доминантный</button>
+            <button class="btn-filter">Сюжет</button>
+            <button class="btn-filter">Злодей</button>
+            <button class="btn-filter">Аниме</button>
+            <button class="btn-filter">Милф</button>
+            <button class="btn-filter">Фурри (неко)</button>
+            <button class="btn-filter">Игра</button>
+            <button class="btn-filter">Герой</button>
+            <button class="btn-filter">Нечеловеческий</button>
+            <button class="btn-filter">Несколько</button>
+            <button class="btn-filter">РПГ</button>
+            <button class="btn-filter">Волшебный</button>
+            <button class="btn-filter">Вампир</button>
+            <button class="btn-filter">Эльф</button>
+            <button class="btn-filter">Футанари</button>
+            <div class="filter-switch-group">
+              <span class="switch-label">Отключить фильтр 18+</span>
+              <label class="switch">
+                <input type="checkbox" id="filter18" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="charactersContainer">
+          <div
+            class="character-item"
+            data-name="Карлита"
+            data-desc="Твоя горничная, которую ты попросил об сексуальных услугах сегодня вечером"
+            data-likes="245"
+            data-comments="3411"
+            data-creator="@Админ"
+            data-tags='["Женский","Покорный","Фэнтези"]'
+            data-img="../images/characters/per1.jpg"
+          >
+            <div class="character-card" onclick="showCharacterDetails(this)">
+              <img
+                src="../images/characters/per1.jpg"
+                class="character-image"
+              />
+              <div class="card-body">
+                <h5 class="character-name">Карлита</h5>
+                <p class="character-desc">Я готова к сегодняшнему вечеру</p>
+                <div class="stats">
+                  <span>❤️ 245</span>
+                  <span>💬 3411</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="character-item"
+            data-name="Ксюша"
+            data-desc="Твоя крашиха одноклассница, которую связали в школьном классе"
+            data-likes="198"
+            data-comments="2040"
+            data-creator="@Админ"
+            data-tags='["Женский","Покорный","Сюжет"]'
+            data-img="../images/characters/per2.jpg"
+          >
+            <div class="character-card" onclick="showCharacterDetails(this)">
+              <img
+                src="../images/characters/per2.jpg"
+                class="character-image"
+              />
+              <div class="card-body">
+                <h5 class="character-name">Ксюша</h5>
+                <p class="character-desc">
+                  В классе ты обнаруживаешь, что твоя краш связана, и после того
+                  как освободишь её, она хочет отблагодарить тебя сюрпризом.
+                </p>
+                <div class="stats">
+                  <span>❤️ 198</span>
+                  <span>💬 2040</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="character-item"
+            data-name="Исекай в теле принцессы"
+            data-desc="Девон: «Что с вашим лицом, ваше величество? Вы бледны. Мне поручить, чтобы горячую ванну или ужин приготовили женщины или мужчины?»"
+            data-likes="1111"
+            data-comments="8401"
+            data-creator="@Админ"
+            data-tags='["Мужской","Женский","Вымышленный","Сюжет","Злодей","Герой","Несколько","РПГ","Роялти","Романтика"]'
+            data-img="../images/characters/per2.jpg"
+          >
+            <div class="character-card" onclick="showCharacterDetails(this)">
+              <img
+                src="../images/characters/per3.jpg"
+                class="character-image"
+              />
+              <div class="card-body">
+                <h5 class="character-name">Исекай в теле принцессы</h5>
+                <p class="character-desc">
+                  Для девочек🌹. Вы проснулись принцессой Викторией, первое, что
+                  вы видите, это обеспокоенное лицо вашей Слуги Деван. Ты будешь
+                  исследовать этот мир, чтобы сбежать или останешься здесь
+                  навсегда?
+                </p>
+                <div class="stats">
+                  <span>❤️ 1111</span>
+                  <span>💬 8401</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="character-item"
+            data-name="Мейсон"
+            data-desc="..."
+            data-likes="52"
+            data-comments="300"
+            data-creator="@Админ"
+            data-tags='["Мужской","Доминантный","Романтичный"]'
+            data-img="../images/characters/per2.jpg"
+          >
+            <div class="character-card" onclick="showCharacterDetails(this)">
+              <img
+                src="../images/characters/per4.jpg"
+                class="character-image"
+              />
+              <div class="card-body">
+                <h5 class="character-name">
+                  Лучший друг твоего брата (Мейсон)
+                </h5>
+                <p class="character-desc">
+                  Твой брат был футболистом, твой отец был тренером. Так что
+                  после каждой игры вся команда возвращалась к тебе домой на
+                  ночь. Ты лежишь в кровати в шортах и спортивном лифчике, когда
+                  проголодаешься, не задумываясь спускаешься по лестнице. А за
+                  кухонным столом сидит вся футбольная команда, включая Мейсона
+                  (лучшего друга братьев) Ты отбрасываешь все мысли в сторону и
+                  все равно идешь к холодильнику, когда твой брат говорит с
+                  тобой. «Эй, можешь попросить у мамы пиццу?»
+                </p>
+                <div class="stats">
+                  <span>❤️ 52</span>
+                  <span>💬 300</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="character-item"
+            data-name="Ксюша5"
+            data-desc="Твоя крашиха одноклассница, которую связали в школьном классе"
+            data-likes="198"
+            data-comments="2040"
+            data-creator="@Админ"
+            data-tags='["Женский","Покорный","Сюжет"]'
+            data-img="../images/characters/per5.jpg"
+          >
+            <div class="character-card" onclick="showCharacterDetails(this)">
+              <img
+                src="../images/characters/per5.jpg"
+                class="character-image"
+              />
+              <div class="card-body">
+                <h5 class="character-name">Ксюша5</h5>
+                <p class="character-desc">
+                  В классе ты обнаруживаешь, что твоя краш связана, и после того
+                  как освободишь её, она хочет отблагодарить тебя сюрпризом.
+                </p>
+                <div class="stats">
+                  <span>❤️ 198</span>
+                  <span>💬 2040</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="character-item"
+            data-name="Ксюша6"
+            data-desc="Твоя крашиха одноклассница, которую связали в школьном классе"
+            data-likes="198"
+            data-comments="2040"
+            data-creator="@Админ"
+            data-tags='["Женский","Покорный","Сюжет"]'
+            data-img="../images/characters/per6.jpg"
+          >
+            <div class="character-card" onclick="showCharacterDetails(this)">
+              <img
+                src="../images/characters/per6.jpg"
+                class="character-image"
+              />
+              <div class="card-body">
+                <h5 class="character-name">Ксюша6</h5>
+                <p class="character-desc">
+                  В классе ты обнаруживаешь, что твоя краш связана, и после того
+                  как освободишь её, она хочет отблагодарить тебя сюрпризом.
+                </p>
+                <div class="stats">
+                  <span>❤️ 198</span>
+                  <span>💬 2040</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="character-item"
+            data-name="Ксюша7"
+            data-desc="Твоя крашиха одноклассница, которую связали в школьном классе"
+            data-likes="198"
+            data-comments="2040"
+            data-creator="@Админ"
+            data-tags='["Женский","Покорный","Сюжет"]'
+            data-img="../images/characters/per7.jpg"
+          >
+            <div class="character-card" onclick="showCharacterDetails(this)">
+              <img
+                src="../images/characters/per7.jpg"
+                class="character-image"
+              />
+              <div class="card-body">
+                <h5 class="character-name">Ксюша7</h5>
+                <p class="character-desc">
+                  В классе ты обнаруживаешь, что твоя краш связана, и после того
+                  как освободишь её, она хочет отблагодарить тебя сюрпризом.
+                </p>
+                <div class="stats">
+                  <span>❤️ 198</span>
+                  <span>💬 2040</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="character-item"
+            data-name="Ксюша8"
+            data-desc="Твоя крашиха одноклассница, которую связали в школьном классе"
+            data-likes="198"
+            data-comments="2040"
+            data-creator="@Админ"
+            data-tags='["Женский","Покорный","Сюжет"]'
+            data-img="../images/characters/per8.jpg"
+          >
+            <div class="character-card" onclick="showCharacterDetails(this)">
+              <img
+                src="../images/characters/per8.jpg"
+                class="character-image"
+              />
+              <div class="card-body">
+                <h5 class="character-name">Ксюша8</h5>
+                <p class="character-desc">
+                  В классе ты обнаруживаешь, что твоя краш связана, и после того
+                  как освободишь её, она хочет отблагодарить тебя сюрпризом.
+                </p>
+                <div class="stats">
+                  <span>❤️ 198</span>
+                  <span>💬 2040</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="character-modal" id="characterModal">
+      <button class="close-btn" onclick="closeCharacterDetails()">×</button>
+      <h2 id="charName"></h2>
+      <img id="charImage" src="" class="character-image" />
+      <div class="tags-container" id="charTags"></div>
+      <p id="charDescription"></p>
+      <div class="stats">
+        <span id="charLikes"></span>
+        <span id="charComments"></span>
+      </div>
+      <button class="start-chat-btn mt-3">Начать чат</button>
+      <div
+        class="creator mt-3"
+        onclick="showAdminModal()"
+        style="cursor: pointer"
+      >
+        Создатель: <span style="color: #ff4d4d" id="charCreator"></span>
+      </div>
+    </div>
+
+    <div class="modal" id="reportModal">
+      <h4>Пожаловаться на персонажа</h4>
+      <p>Причина:</p>
+      <textarea id="reportReason" rows="4"></textarea>
+      <div class="mt-3">
+        <button onclick="submitReport()">Отправить</button>
+        <button onclick="closeReport()">Отмена</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // --- Объявляем переменные ---
+      const words18Plus = [
+        "18+",
+        "18",
+        "взрослый",
+        "взрослая",
+        "взрослое",
+        "взрослые",
+        "детское",
+        "adult",
+        "grown-up",
+        "mature",
+        "senior",
+        "сексуальный",
+        "сексуальная",
+        "сексуальное",
+        "сексуальные",
+        "sexual",
+        "sexually",
+        "sensual",
+        "erotic",
+        "sexy",
+        "секс",
+        "эротика",
+        "эротические",
+        "эротично",
+        "эротичные",
+        "эроти",
+        "eroticism",
+        "sensuality",
+        "порнография",
+        "pornography",
+        "porn",
+        "порно",
+        "порн",
+        "голый",
+        "голая",
+        "голое",
+        "голые",
+        "naked",
+        "nude",
+        "bare",
+        "обнажённый",
+        "обнажённая",
+        "обнажённое",
+        "обнажённые",
+        "exposed",
+        "unclothed",
+        "похотливый",
+        "похотливая",
+        "похотливое",
+        "похотливые",
+        "lascivious",
+        "lecherous",
+        "lustful",
+        "похоть",
+        "пошлая",
+        "пошлый",
+        "хорни",
+        "horny",
+        "lust",
+        "desire",
+        "зрелый",
+        "зрелая",
+        "зрелое",
+        "зрелые",
+        "mature",
+        "full-grown",
+        "жрица",
+        "priestess",
+        "virgin",
+        "вагина",
+        "киска",
+        "пизда",
+        "maiden",
+        "блядь",
+        "проститутка",
+        "шлюха",
+        "распутница",
+        "сука",
+        "сучка",
+        "блуд",
+        "блудница",
+        "потаскуха",
+        "whore",
+        "slut",
+        "секс",
+        "sex",
+        "кекс",
+        "шрекс",
+        "разврат",
+        "развратница",
+        "развратник",
+        "развращение",
+        "развратил",
+        "развратила",
+        "совращение",
+        "совратил",
+        "совратила",
+        "intercourse",
+        "оргазм",
+        "orgasm",
+        "фетиш",
+        "fetish",
+        "фетишизм",
+        "fetishism",
+        "фетишист",
+        "fetishist",
+        "сексуальность",
+        "sexuality",
+        "горячий",
+        "горячая",
+        "горячее",
+        "горячие",
+        "hot",
+        "жаркий",
+        "жаркая",
+        "жаркое",
+        "жаркие",
+        "scorching",
+        "fiery",
+        "пылкий",
+        "пылкая",
+        "пылкое",
+        "пылкие",
+        "passionate",
+        "страстный",
+        "страстная",
+        "страстное",
+        "страстные",
+        "соблазнение",
+        "соблазнительный",
+        "соблазнительная",
+        "соблазнительное",
+        "соблазнительные",
+        "соблазнил",
+        "соблазнила",
+        "seductive",
+        "alluring",
+        "heat",
+        "scorch",
+        "жар",
+        "fire",
+        "passion",
+        "грудь",
+        "bosom",
+        "breast",
+        "соски",
+        "сосок",
+        "nipples",
+        "nipple",
+        "задница",
+        "зад",
+        "жопа",
+        "попа",
+        "ass",
+        "buttocks",
+        "ягодицы",
+        "анал",
+        "орал",
+        "попка",
+        "член",
+        "писюн",
+        "хуй",
+        "писька",
+        "залупа",
+        "половой",
+        "орган",
+        "промежность",
+        "butt",
+        "ласки",
+        "caresses",
+        "поцелуи",
+        "поцелуй",
+        "целовать",
+        "целует",
+        "kiss",
+        "kisses",
+        "массаж",
+        "massage",
+        "прикосновение",
+        "touch",
+        "фантазии",
+        "fantasy",
+        "сцены",
+        "scenes",
+        "натура",
+        "nudity",
+        "изгибы",
+        "curv",
+        "corruption",
+        "девственность",
+        "девственна",
+        "девственник",
+        "девственница",
+        "целка",
+        "грубо",
+        "грубая",
+        "грубость",
+        "жёстко",
+        "жестко",
+        "жестоко",
+        "жеска",
+        "жеско",
+        "rough",
+        "образ",
+        "dominant",
+        "доминант",
+        "домина",
+        "альфа",
+        "бета",
+        "бэта",
+        "омега",
+        "омежка",
+        "госпожа",
+        "господин",
+        "хозяин",
+        "хозяйка",
+        "раб",
+        "рабыня",
+        "submissive",
+        "bdsm",
+        "bondage",
+        "rape",
+        "изнасилование",
+        "изнасиловать",
+        "изнасиловал",
+        "изнасиловала",
+        "надругалась",
+        "надругался",
+        "лишил",
+        "трахнул",
+        "трахнула",
+        "трах",
+        "факнула",
+        "факнул",
+        "имеет",
+        "поимел",
+        "поимела",
+        "incest",
+        "инцест",
+        "семейное",
+        "yandere",
+        "яндере",
+        "яндерка",
+        "seduction",
+        "teasing",
+        "дразнит",
+        "flirting",
+        "флиртует",
+        "флирт",
+        "заигрывает",
+        "curvy",
+        "busty",
+        "muscular",
+        "boobs",
+        "breasts",
+        "tits",
+        "alpha",
+        "beta",
+        "predator",
+        "temptress",
+        "seducer",
+        "manipulator",
+        "abuser",
+        "абьюзер",
+        "абьюзерша",
+        "lover",
+        "любовник",
+        "любовница",
+        "измена",
+        "куколд",
+        "pervert",
+        "извращенец",
+        "извращенка",
+        "изврат",
+        "интим",
+        "вирт",
+        "страсть",
+        "страстно",
+        "страстное",
+        "пылкая",
+        "пылкий",
+      ];
+
+      let selectedTags = new Set();
+      const allButton = () =>
+        Array.from(document.querySelectorAll(".btn-filter")).find(
+          (b) => b.textContent.trim() === "Все"
+        );
+      const filter18Checkbox = document.getElementById("filter18");
+
+      // --- Функция фильтрации ---
+      function filterCharacters() {
+        const searchQuery = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const showAll = allButton().classList.contains("active");
+        const filter18Checked = document.getElementById("filter18").checked;
+
+        // Создаем регулярное выражение для поиска любых слов из списка, с учетом регистра
+        const pattern = new RegExp(words18Plus.join("|"), "i");
+
+        document.querySelectorAll(".character-item").forEach((item) => {
+          const name = (item.dataset.name || "").toLowerCase();
+
+          // Получаем описание из data-desc
+          const dataDesc = (item.dataset.desc || "").toLowerCase();
+
+          // Получаем описание из элемента <p class="character-desc">
+          const descElem = item.querySelector(".character-desc");
+          const descInnerText = descElem
+            ? descElem.textContent.toLowerCase()
+            : "";
+
+          // Объединяем оба описания
+          const fullDesc = dataDesc + " " + descInnerText;
+
+          // Удаляем все символы, кроме букв и цифр, чтобы избежать проблем с пунктуацией/пробелами
+          const cleanedDesc = fullDesc.replace(/[^a-zA-Zа-яА-Я0-9]+/g, " ");
+
+          // Проверка наличия слов из 18+ в полном описании через регулярное выражение
+          const contains18Plus = pattern.test(cleanedDesc);
+
+          // Поиск по имени и описанию
+          if (
+            searchQuery &&
+            !(
+              item.dataset.name.toLowerCase().includes(searchQuery) ||
+              fullDesc.includes(searchQuery)
+            )
+          ) {
+            item.style.display = "none";
+            return;
+          }
+
+          // Теги
+          let matchesTags = true;
+          const tags = JSON.parse(item.dataset.tags || "[]");
+
+          if (!showAll) {
+            if (selectedTags.size > 0) {
+              matchesTags = Array.from(selectedTags).some((t) =>
+                tags.includes(t)
+              );
+            }
+          } else {
+            if (tags.includes("NSFW")) {
+              matchesTags = false;
+            }
+          }
+
+          // Логика по 18+:
+          if (filter18Checked) {
+            // Показывать только тех, у кого есть слова из 18+ в полном описании
+            if (!contains18Plus) {
+              matchesTags = false;
+            }
+          } else {
+            // Показывать только тех, у кого нет слов из 18+ в полном описании
+            if (contains18Plus) {
+              matchesTags = false;
+            }
+          }
+
+          // Установка отображения
+          item.style.display = matchesTags ? "" : "none";
+        });
+      }
+
+      // Обработка переключателей и фильтров
+      document.querySelectorAll(".btn-filter").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const text = btn.textContent.trim();
+
+          if (text === "Все") {
+            // Сброс всех тегов
+            selectedTags.clear();
+            // Удаляем активность у всех
+            document
+              .querySelectorAll(".btn-filter")
+              .forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+          } else {
+            // Переключение тега
+            if (selectedTags.has(text)) {
+              selectedTags.delete(text);
+              btn.classList.remove("active");
+            } else {
+              selectedTags.add(text);
+              btn.classList.add("active");
+            }
+            // Управление активностью "Все"
+            const allBtnEl = Array.from(
+              document.querySelectorAll(".btn-filter")
+            ).find((b) => b.textContent.trim() === "Все");
+            if (selectedTags.size > 0) {
+              allBtnEl.classList.remove("active");
+            } else {
+              allBtnEl.classList.add("active");
+            }
+          }
+          filterCharacters();
+        });
+      });
+
+      // Обработчик переключения 18+
+      document.getElementById("filter18").addEventListener("change", () => {
+        const checkbox = document.getElementById("filter18");
+        if (!checkbox.checked) {
+          // снимаем активность у "NSFW"
+          if (nsfwBtn) nsfwBtn.classList.remove("active");
+        } else {
+          // ставим активность, если чекбокс отмечен
+          if (nsfwBtn) nsfwBtn.classList.add("active");
+        }
+        filterCharacters();
+      });
+
+      // Обработчик поиска
+      document.getElementById("searchInput").addEventListener("input", () => {
+        filterCharacters();
+      });
+
+      // Инициализация
+      window.addEventListener("load", () => {
+        const allBtnEl = Array.from(
+          document.querySelectorAll(".btn-filter")
+        ).find((b) => b.textContent.trim() === "Все");
+        allBtnEl.classList.add("active");
+        filterCharacters();
+      });
+
+      // --- Обработчик для кнопки "NSFW" ---
+      const nsfwBtn = document.querySelector(
+        ".filter-buttons button:nth-child(5)"
+      );
+
+      if (nsfwBtn) {
+        nsfwBtn.addEventListener("click", () => {
+          const checkbox = document.getElementById("filter18");
+          const isActive = nsfwBtn.classList.contains("active");
+
+          if (!isActive) {
+            // Включаем "NSFW"
+            checkbox.checked = true;
+            nsfwBtn.classList.add("active");
+          } else {
+            // Выключаем "NSFW": снимаем чекбокс, убираем активность
+            checkbox.checked = false;
+            nsfwBtn.classList.remove("active");
+          }
+          filterCharacters();
+        });
+      }
+
+      // --- Остальные функции для карточек ---
+      function showCharacterDetails(element) {
+        const item = element.closest(".character-item");
+        const data = item.dataset;
+        document.getElementById("charName").textContent = data.name;
+        document.getElementById("charDescription").textContent = data.desc;
+        document.getElementById("charLikes").textContent = `❤️ ${data.likes}`;
+        document.getElementById(
+          "charComments"
+        ).textContent = `💬 ${data.comments}`;
+        document.getElementById("charImage").src = data.img;
+
+        const tagsContainer = document.getElementById("charTags");
+        tagsContainer.innerHTML = "";
+        JSON.parse(data.tags).forEach((tag) => {
+          const span = document.createElement("span");
+          span.className = "tag";
+          span.textContent = tag;
+          tagsContainer.appendChild(span);
+        });
+
+        document.getElementById("characterModal").classList.add("active");
+        document.getElementById("overlay").classList.add("active");
+      }
+      function closeCharacterDetails() {
+        document.getElementById("characterModal").classList.remove("active");
+        document.getElementById("overlay").classList.remove("active");
+      }
+      function openReport(btn, characterName) {
+        document.getElementById("reportReason").value = "";
+        document.getElementById("reportModal").style.display = "flex";
+        document.getElementById("overlay").classList.add("active");
+      }
+      function closeReport() {
+        document.getElementById("reportModal").style.display = "none";
+        document.getElementById("overlay").classList.remove("active");
+      }
+      function submitReport() {
+        const reason = document.getElementById("reportReason").value.trim();
+        if (!reason) return alert("Укажите причину жалобы!");
+        alert(`Жалоба отправлена!`);
+        closeReport();
+      }
+      document.getElementById("overlay").addEventListener("click", () => {
+        closeCharacterDetails();
+        closeReport();
+      });
+    </script>
+  </body>
+</html>
